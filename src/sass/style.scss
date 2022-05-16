@@ -1,0 +1,24 @@
+ul li{
+    list-style-type: none;
+}
+
+ul{
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+@import 'modules/header';
+@import 'modules/into';
+@import 'modules/company';
+@import 'modules/provide';
+@import 'modules/start';
+@import 'modules/serve';
+@import 'modules/choose';
+@import 'modules/gratitude';
+@import 'modules/experience';
+@import 'modules/footer';
+
+@import 'media';

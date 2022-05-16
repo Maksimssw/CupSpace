@@ -1,0 +1,29 @@
+@mixin font($color, $fontWeight, $fontSize, $lineHeight) {
+    color: $color;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+}
+
+@mixin  text($color) {
+    color: $color;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 16px;
+}
+
+
+
+@mixin button($width, $color) {
+    width: $width;
+    height: 58px;
+    background: $orange;
+    @include font($color, 700, 16px, 24px);
+    border: none;
+    border-radius: 29px;
+    transition: 0.3s all;
+    &:hover, &:focus{
+        color: $dark;
+        background: $white;
+    }
+}

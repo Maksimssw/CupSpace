@@ -1,0 +1,50 @@
+@import '../base/mixin';
+@import '../base/variables';
+
+.choose{
+    padding: 100px 0 100px;
+    &__title{
+        @include font($dark, 700, 42px, 62px);
+        margin-bottom: 58px;
+        text-align: center;
+    }
+    &__icon{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: rgba(88, 190, 191, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        transition: 0.3s all;
+        svg{
+            transition: 0.3s all;
+            path{
+                fill:rgba(88, 190, 191, 0.2);
+            }
+        }
+    }
+    &__heading{
+        @include font($dark, 700, 28px, 42px);
+        margin: 15px 0 2px;
+        text-align: center;
+    }
+    &__description{
+        @include text($dark);
+        text-align: center;
+    }
+    &__wrapper{
+        transition: 0.3s all;
+        &:hover{
+            .choose__icon{
+                background: $orange;
+            }
+            svg{
+                path{
+                    fill: $white;
+                }
+            }
+        }
+    }
+}

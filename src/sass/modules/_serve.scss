@@ -1,0 +1,68 @@
+@import '../base/mixin';
+@import '../base/variables';
+
+.serve{
+    &__title{
+        @include font($dark, 700, 42px, 62px);
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    &__subtitle{
+        text-align: center;
+        @include text ($dark);
+        margin-bottom: 45px;
+    }
+    &__list{
+        padding: 40px 0;
+        background: $orange;
+        box-shadow: 0px 40px 52px -22px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        transition: 0.3s all;
+        padding: 30px 15px;
+        &:hover{
+            background-color: $white;
+            .icon{
+                path{
+                    fill: $orange;
+                }
+            }
+            .serve{
+                &__heading{
+                    color: $dark;
+                }
+                &__description{
+                    color: $dark;
+                }
+            }
+        }
+    }
+    svg{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        transition: 0.3s all;
+    }
+    &__heading{
+        @include font($white, 700, 42px, 63px);
+        text-align: center;
+        transition: 0.3s all;
+    }
+    &__description{
+        @include text($white);
+        margin-bottom: 25px;
+        text-align: center;
+        transition: 0.3s all;
+    }
+    &__get{
+        outline: none;
+        border: none;
+        display: block;
+        margin: 0 auto;
+        background: $white;
+        transition: 0.3s all;
+        width: 172px;
+        height: 58px;
+        @include font($orange, 700, 16px, 24px);
+        border-radius: 29px;
+    }
+}

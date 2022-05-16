@@ -1,0 +1,48 @@
+@import '../base/mixin';
+@import '../base/variables';
+
+.start{
+    padding: 150px 0 150px;
+    img{
+        width: 100%;
+        border-radius: 0px 20px 0px 0px;
+    }
+    &__wrapper{
+        padding-top: 59px;
+        background: url('../../img/Start/greenBg.png') no-repeat center;
+        border-radius: 20px;
+        background-size: 100% 100%;
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &__contact{
+        @include button(172px, $white);
+    } 
+    &__watch{
+        @include button(172px, $white);
+        background: $white;
+        color: $orange;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 12px solid transparent; 
+            border-left: 12px solid $orange;
+            border-radius: 1px;
+            left: 20px;
+        }
+    }
+    &__title{
+        @include font($white, 700, 42px, 62px);
+        margin-bottom: 15px;
+    }
+    &__subtitle{
+        @include text($white);
+        margin-bottom: 30px;
+    }
+}

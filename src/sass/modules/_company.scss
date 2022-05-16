@@ -1,0 +1,11 @@
+@import '../base/mixin';
+@import '../base/variables';
+
+.company{
+    padding: 100px 0;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

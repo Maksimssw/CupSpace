@@ -1,0 +1,35 @@
+@import '../base/mixin';
+@import '../base/variables';
+
+.footer{
+    padding: 70px 0 80px;
+    &__verum{
+        @include text($dark);
+        margin: 15px 0 40px;
+    }
+    &__socialis{
+        display: flex;
+        justify-content: space-between;
+        width: 184px;
+        align-items: center;
+    }
+    &__heading{
+        @include font($dark, 700, 21px, 31px);
+        margin-bottom: 18px;
+    }
+    &__text{
+        margin-bottom: 13px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        a{
+            text-decoration: none;
+            @include text($dark);
+            transition: 0.3s all;
+            &:hover, &:focus{
+                outline: none;
+                color: $orange;
+            }
+        }
+    }
+}
